@@ -1,6 +1,11 @@
 const express = require('express');
 
 const app = express();
+var server = require('http').createServer(app)
+
+app.listen(80, () => {
+    console.log('App is running');
+});
 
 const { proxy, scriptUrl } = require('rtsp-relay')(app);
 
